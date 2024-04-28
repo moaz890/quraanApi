@@ -7,10 +7,9 @@ const app = express();
 app.get('/api', async (req, res) => {
   
   try {    
-    const { q } = req.query;
 
     // Make the request to the YouTube API
-    const response = await fetch(`https://www.mp3quran.net/api/v3&q=${encodeURIComponent(q)}`, {
+    const response = await fetch(`https://www.mp3quran.net/api/v3`, {
   
     });
 
@@ -22,7 +21,7 @@ app.get('/api', async (req, res) => {
   } catch (error) {
     console.error(error);
     
-    res.status(500).json({ error: 'An error occurred', query: req.query });
+    res.status(500).json({ error: 'An error occurred' });
   }
 });
 
