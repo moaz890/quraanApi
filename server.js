@@ -10,7 +10,12 @@ app.get('/api', async (req, res) => {
 
     // Make the request to the YouTube API
     const response = await fetch(`https://www.mp3quran.net/api/v3`, {
-  
+      method: "GET",
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Headers": "*",
+        'mode': 'no-cors',
+      },
     });
 
     // Get the response body as JSON
