@@ -4,7 +4,7 @@ import express from "express";
 const app = express();
 
 // Set up a route to proxy the YouTube API request
-app.get('/api', async (req, res) => {
+app.get('/', async (req, res) => {
   
   try {    
 
